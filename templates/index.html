@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID AI Predictor</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="glass-card">
+
+    <h1>
+        <i class="fa-solid fa-virus-covid"></i>
+        COVID AI Predictor
+    </h1>
+
+    <p>Predict Total COVID Cases using Machine Learning</p>
+
+    <form action="/predict" method="POST">
+
+        <input type="number" name="Active" placeholder="Active Cases" required>
+
+        <input type="number" name="Discharged" placeholder="Discharged Cases" required>
+
+        <input type="number" name="Deaths" placeholder="Deaths" required>
+
+        <input type="number" step="any" name="ActiveRatio" placeholder="Active Ratio" required>
+
+        <input type="number" step="any" name="DischargeRatio" placeholder="Discharge Ratio" required>
+
+        <input type="number" step="any" name="DeathRatio" placeholder="Death Ratio" required>
+
+        <input type="number" name="Population" placeholder="Population" required>
+
+        <button type="submit">
+            Predict Now
+        </button>
+
+    </form>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

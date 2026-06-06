@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Prediction Result</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="glass-card">
+
+    <h1>Prediction Complete</h1>
+
+    <div class="prediction-box">
+
+        <h3>Predicted Total Cases</h3>
+
+        <h2>{{ prediction }}</h2>
+
+    </div>
+
+    <a href="/">
+        <button>
+            Predict Again
+        </button>
+    </a>
+
+</div>
+
+</body>
+</html>
